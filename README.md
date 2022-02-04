@@ -1,8 +1,18 @@
 # issue-tracker
 
-[API Documentation](https://documenter.getpostman.com/view/15685287/UVeFPT3d)
+| Maker                                      |
+| ------------------------------------------ |
+| 👾 [@edward](https://github.com/bepyan)    |
+| 🔥 [@ethan](https://github.com/tjdgus3160) |
+| 🍒 [@lin](https://github.com/scl2589)      |
 
 <br>
+
+[📚 API Documentation](https://documenter.getpostman.com/view/15685287/UVeFPT3d)
+
+<br>
+
+### 실행 방법
 
 ```
 yarn
