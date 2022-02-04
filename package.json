@@ -1,0 +1,38 @@
+{
+  "name": "fe-w4-issue-tracker-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon --exec ts-node --files src/app.ts",
+    "build": "tsc -p .",
+    "start": "node dist/app.js"
+  },
+  "dependencies": {
+    "axios": "^0.25.0",
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "json-server": "^0.17.0",
+    "jsonwebtoken": "^8.5.1",
+    "passport": "^0.5.2",
+    "passport-github": "^1.1.0",
+    "passport-jwt": "^4.0.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/json-server": "^0.14.4",
+    "@types/jsonwebtoken": "^8.5.8",
+    "@types/node": "^17.0.14",
+    "@types/passport": "^1.0.7",
+    "@types/passport-github": "^1.1.7",
+    "@types/passport-jwt": "^3.0.6",
+    "@types/uuid": "^8.3.4",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.5"
+  }
+}
