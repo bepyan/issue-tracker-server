@@ -4,6 +4,13 @@
 
 <br>
 
+```
+yarn
+yarn dev
+```
+
+<br>
+
 ### Our Jobs
 
 - [ x ] json-server DB 구축
