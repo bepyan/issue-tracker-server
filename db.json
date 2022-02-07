@@ -31,12 +31,8 @@
         "92f1ea76-7683-406f-9625-e2f646d67fc5",
         "5cf1bbb3-666a-4e9e-b8e4-2f67687405f3"
       ],
-      "labels": [
-        "2"
-      ],
-      "assignees": [
-        "user2"
-      ],
+      "labels": ["2"],
+      "assignees": ["user2"],
       "milestone": "1",
       "writer": "user1",
       "status": "close",
@@ -51,9 +47,7 @@
       "title": "이슈 메이코",
       "assignees": [],
       "labels": [],
-      "comments": [
-        "f58dda4f-1637-4dc0-8f62-a63a8e58c199"
-      ],
+      "comments": ["f58dda4f-1637-4dc0-8f62-a63a8e58c199"],
       "milestone": null
     },
     {
@@ -63,18 +57,9 @@
       "writer": "user1",
       "timestamp": "2022-02-04T04:39:44.755Z",
       "title": "어쩔티비 ㅋㅋ",
-      "assignees": [
-        "user1",
-        "user2",
-        "user3"
-      ],
-      "labels": [
-        "2",
-        "3"
-      ],
-      "comments": [
-        "3127f58a-4bd8-431f-bf39-082fbd370025"
-      ],
+      "assignees": ["user1", "user2", "user3"],
+      "labels": ["2", "3"],
+      "comments": ["3127f58a-4bd8-431f-bf39-082fbd370025"],
       "milestone": null
     }
   ],
@@ -83,7 +68,7 @@
       "id": "2",
       "name": "doc",
       "description": "documentation label",
-      "color": "#FEFEFE",
+      "color": "dark",
       "backgroundColor": "#0025E7",
       "userId": "user1"
     },
@@ -91,14 +76,14 @@
       "id": "3",
       "name": "documentation",
       "description": "documentation label",
-      "color": "#FEFEFE",
+      "color": "dark",
       "backgroundColor": "#0025E7",
       "userId": "user1"
     },
     {
       "name": "테스111트1",
       "description": "포스트맨테스트",
-      "color": "light",
+      "color": "dark",
       "backgroundColor": "#333",
       "id": "14f1c4fa-d027-4539-a485-76faf089ce68",
       "userId": "user1"
@@ -110,9 +95,7 @@
       "title": "마일스톤 1",
       "description": "마일스톤 1",
       "deadline": "20220501",
-      "issues": [
-        "1"
-      ],
+      "issues": ["1"],
       "status:": "initial"
     },
     {

@@ -11,7 +11,7 @@ router.get(
   asyncErrorCatcher(async (req, res) => {
     const userId = (req.user as UserDTO).id;
     const labelList = await LabelService.getByUserId(userId);
-    res.send({ labelList });
+    res.send(labelList);
   })
 );
 

@@ -5,6 +5,20 @@ import { JWTService, UserService } from "../services";
 
 const router = express.Router();
 
+router.get(
+  "/",
+  requireJWT,
+  asyncErrorCatcher(async (req, res) => {
+    const userJSONList = await UserService.getAllUser();
+
+    const userList: UserDTO[] = userJSONList.map((v) => ({
+      id: v.id,
+      name: v.name,
+    }));
+    res.send(userList);
+  })
+);
+
 router.post(
   "/login",
   asyncErrorCatcher(async (req, res) => {

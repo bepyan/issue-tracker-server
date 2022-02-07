@@ -70,7 +70,7 @@ router.patch(
 );
 
 router.patch(
-  "/:issueId/change",
+  "/:issueId/status",
   asyncErrorCatcher(async (req, res) => {
     const userId = (req.user as UserDTO).id;
     const { issueId } = req.params;

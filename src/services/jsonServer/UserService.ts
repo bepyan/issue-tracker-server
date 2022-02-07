@@ -4,6 +4,11 @@ import { _axios } from "../AxiosService";
 const baseURL = "/users";
 
 export default class UserService {
+  static async getAllUser() {
+    const { data } = await _axios.get<UserJSON[]>(`${baseURL}`);
+    return data;
+  }
+
   static async getById(id: string) {
     const { data } = await _axios.get<UserJSON>(`${baseURL}/${id}`);
     return data;
