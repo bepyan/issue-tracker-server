@@ -10,9 +10,7 @@ const router = express.Router();
 router.get(
   "/",
   asyncErrorCatcher(async (req, res) => {
-    const user = req.user as UserDTO;
-
-    const issueList = await IssueService.getUserIssue(user.id);
+    const issueList = await IssueService.getAll();
     res.send(issueList);
   })
 );

@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon --exec ts-node --files src/app.ts",
+    "dev": "nodemon --watch \"src/**/*.ts\"  --exec ts-node --files src/app.ts",
     "build": "tsc -p .",
     "start": "node dist/app.js"
   },

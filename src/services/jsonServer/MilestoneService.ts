@@ -47,10 +47,13 @@ export default class MilestoneService {
   }
 
   static async patchAddIssue(id: string, issueId: string) {
-    const milestone = await this.getById(id);
+    const [milestone, newIssue] = await Promise.all([
+      this.getByIdJSON(id),
+      IssueService.getByIdJSON(issueId),
+    ]);
 
-    const { data } = await _axios.patch<MilestoneDTO>(`${baseURL}/${id}`, {
-      issues: [...milestone.issues, issueId],
+    const { data } = await _axios.patch<MilestoneJSON>(`${baseURL}/${id}`, {
+      issues: [...milestone.issues, newIssue.id],
     });
     return data;
   }

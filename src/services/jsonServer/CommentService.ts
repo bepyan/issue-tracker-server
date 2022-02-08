@@ -15,6 +15,7 @@ export default class CommentService {
       id,
       status: "initial",
       author,
+      timestamp: new Date().toUTCString(),
       ...comment,
     };
 
