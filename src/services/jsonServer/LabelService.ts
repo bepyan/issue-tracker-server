@@ -5,10 +5,8 @@ import { v4 as uuidv4 } from "uuid";
 const baseUrl = "/labels";
 
 export default class LabelService {
-  static async getByUserId(userId: string) {
-    const { data } = await _axios.get<LabelDTO[]>(
-      `${baseUrl}?userId=${userId}`
-    );
+  static async getAll() {
+    const { data } = await _axios.get<LabelDTO[]>(`${baseUrl}`);
     return data;
   }
 
@@ -21,7 +19,6 @@ export default class LabelService {
     const newLabel = {
       ...payload,
       id: uuidv4(),
-      userId,
     };
     const { data } = await _axios.post<LabelDTO>(baseUrl, newLabel);
     return data;

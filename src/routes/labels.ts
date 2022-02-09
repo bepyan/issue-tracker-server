@@ -9,8 +9,7 @@ const router = express.Router();
 router.get(
   "/",
   asyncErrorCatcher(async (req, res) => {
-    const userId = (req.user as UserDTO).id;
-    const labelList = await LabelService.getByUserId(userId);
+    const labelList = await LabelService.getAll();
     res.send(labelList);
   })
 );
@@ -31,7 +30,7 @@ router.post(
     const userId = (req.user as UserDTO).id;
     const newLabel = req.body;
     // 중복 체크
-    const userLabelList = await LabelService.getByUserId(userId);
+    const userLabelList = await LabelService.getAll();
     if (userLabelList.filter(({ name }) => newLabel.name == name).length) {
       throw {
         message: "이미 존재하는 라벨입니다.",

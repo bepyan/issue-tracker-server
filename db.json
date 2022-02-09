@@ -28,15 +28,9 @@
       "writer": "user1",
       "timestamp": "Tue, 08 Feb 2022 14:32:49 GMT",
       "title": "어쩔티비 ㅋㅋ",
-      "assignees": [
-        "github65283190"
-      ],
-      "labels": [
-        "327c4bc5-3881-432a-83b7-1b7e80425f53"
-      ],
-      "comments": [
-        "61194118-3fb6-4d1b-9681-9f5dc5955960"
-      ],
+      "assignees": ["github65283190"],
+      "labels": ["327c4bc5-3881-432a-83b7-1b7e80425f53"],
+      "comments": ["61194118-3fb6-4d1b-9681-9f5dc5955960"],
       "milestone": "ce566239-bb91-4fcd-856f-1237fe3e8e14"
     },
     {
@@ -46,16 +40,12 @@
       "writer": "user1",
       "timestamp": "Tue, 08 Feb 2022 14:33:28 GMT",
       "title": "첫 이슈",
-      "assignees": [
-        "user1"
-      ],
+      "assignees": ["user1"],
       "labels": [
         "ed262cc8-6007-4e72-b537-58d8c790bf8f",
         "b0bffb05-b763-41bb-bf82-45a87e36510d"
       ],
-      "comments": [
-        "a2ad6224-ca43-4153-a4c2-3bac3434242b"
-      ],
+      "comments": ["a2ad6224-ca43-4153-a4c2-3bac3434242b"],
       "milestone": null
     },
     {
@@ -65,28 +55,25 @@
       "writer": "user1",
       "timestamp": "Tue, 08 Feb 2022 14:42:48 GMT",
       "title": "위대한 여정의 시작",
-      "assignees": [
-        "user2"
-      ],
-      "labels": [
-        "35d9532d-d164-478f-ab94-d7a94af2325e"
-      ],
-      "comments": [
-        "2deb6fdd-975c-4928-b39a-1c215f264e68"
-      ],
+      "assignees": ["user2"],
+      "labels": ["35d9532d-d164-478f-ab94-d7a94af2325e"],
+      "comments": ["2deb6fdd-975c-4928-b39a-1c215f264e68"],
       "milestone": "ce566239-bb91-4fcd-856f-1237fe3e8e14"
     },
     {
       "id": "4146361d-9efa-4f03-ae32-6f84cdc45857",
       "num": 4,
-      "status": "open",
+      "status": "close",
       "writer": "user1",
       "timestamp": "Tue, 08 Feb 2022 14:44:40 GMT",
       "title": "테스트 이슈",
       "assignees": [],
       "labels": [],
       "comments": [
-        "994897d9-6ba3-4ff2-a3f3-873995442993"
+        "994897d9-6ba3-4ff2-a3f3-873995442993",
+        "8aecd838-e1fe-4758-8540-6c2d896cc359",
+        "d295a685-a04f-4be9-a75f-a2dcd4d9be67",
+        "2a1b70a3-6270-4abc-80d9-276ebe5cb913"
       ],
       "milestone": null
     }
@@ -198,6 +185,27 @@
       "author": "user1",
       "timestamp": "Tue, 08 Feb 2022 14:44:40 GMT",
       "content": "테스트 입니다."
+    },
+    {
+      "id": "8aecd838-e1fe-4758-8540-6c2d896cc359",
+      "status": "closed",
+      "author": "user1",
+      "timestamp": "Tue, 08 Feb 2022 14:57:22 GMT",
+      "content": "이슈가 닫혔습니다."
+    },
+    {
+      "id": "d295a685-a04f-4be9-a75f-a2dcd4d9be67",
+      "status": "reopen",
+      "author": "user1",
+      "timestamp": "Tue, 08 Feb 2022 15:00:23 GMT",
+      "content": "이슈가 다시 열렸습니다."
+    },
+    {
+      "id": "2a1b70a3-6270-4abc-80d9-276ebe5cb913",
+      "status": "closed",
+      "author": "user1",
+      "timestamp": "Wed, 09 Feb 2022 01:23:36 GMT",
+      "content": "이슈가 닫혔습니다."
     }
   ]
 }
