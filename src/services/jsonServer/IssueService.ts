@@ -68,11 +68,9 @@ class IssueService {
 
   //  POST
   static async post(userId: string, payload: IssueRequestDTO) {
-    const { data: issueList } = await _axios.get<IssueJSON[]>(
-      `${baseUrl}?writer=${userId}`
-    );
+    const { data: issueList } = await _axios.get<IssueJSON[]>(`${baseUrl}`);
 
-    const nextNum = issueList.length + 1;
+    const nextNum = issueList.length;
     const issueId = uuidv4();
     const commentId = uuidv4();
     const milestoneId = payload.milestone;

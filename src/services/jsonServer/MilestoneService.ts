@@ -1,4 +1,9 @@
-import { MilestoneDTO, MilestoneJSON, MilestoneRequestDTO } from "@types";
+import {
+  MilestoneDTO,
+  MilestoneJSON,
+  MilestoneRequestDTO,
+  MilestoneStatus,
+} from "@types";
 import { _axios } from "../AxiosService";
 import IssueService from "./IssueService";
 import { v4 as uuidv4 } from "uuid";
@@ -39,10 +44,11 @@ export default class MilestoneService {
 
   // 마일스톤 수정
   static async patch(id: string, payload: Partial<MilestoneRequestDTO>) {
-    const { data } = await _axios.patch<MilestoneDTO>(
-      `${baseURL}/${id}`,
-      payload
-    );
+    const { data } = await _axios.patch<MilestoneDTO>(`${baseURL}/${id}`, {
+      title: payload.title,
+      deadline: payload.deadline,
+      description: payload.description,
+    });
     return data;
   }
 
@@ -64,6 +70,18 @@ export default class MilestoneService {
     const { data } = await _axios.patch<MilestoneDTO>(`${baseURL}/${id}`, {
       issues: milestone.issues.filter((id) => id !== issueId),
     });
+    return data;
+  }
+
+  static async patchChangeState(id: string) {
+    const { status } = await this.getByIdJSON(id);
+
+    const nextStatus: MilestoneStatus = status === "open" ? "closed" : "open";
+
+    const { data } = await _axios.patch(`${baseURL}/${id}`, {
+      status: nextStatus,
+    });
+
     return data;
   }
 

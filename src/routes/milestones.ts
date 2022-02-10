@@ -53,6 +53,16 @@ router.patch(
   })
 );
 
+router.patch(
+  "/:id/status",
+  asyncErrorCatcher(async (req, res) => {
+    const { id } = req.params;
+
+    const newMilestone = await MilestoneService.patchChangeState(id);
+    res.send(newMilestone);
+  })
+);
+
 router.delete(
   "/:id",
   asyncErrorCatcher(async (req, res) => {
