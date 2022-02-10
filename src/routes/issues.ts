@@ -77,7 +77,7 @@ router.patch(
     const newIssue = await IssueService.patchChangeState({
       userId,
       issueId,
-      status,
+      status: status === "open" ? "close" : "open",
     });
     res.send(newIssue);
   })

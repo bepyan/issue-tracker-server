@@ -19,7 +19,7 @@ router.get("/github", passport.authenticate("github", { session: false }));
 router.get(
   "/github/callback",
   passport.authenticate("github", {
-    failureRedirect: "/login",
+    failureRedirect: "https://bepyan.github.io/fe-w4-issue-tracker",
     session: false,
   }),
   async (req, res) => {
