@@ -72,8 +72,13 @@ router.patch(
   asyncErrorCatcher(async (req, res) => {
     const userId = (req.user as UserDTO).id;
     const { issueId } = req.params;
+    const { status } = req.body;
 
-    const newIssue = await IssueService.patchChangeState({ userId, issueId });
+    const newIssue = await IssueService.patchChangeState({
+      userId,
+      issueId,
+      status,
+    });
     res.send(newIssue);
   })
 );

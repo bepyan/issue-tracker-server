@@ -4,6 +4,7 @@ import {
   IssueRequestDTO,
   UserDTO,
   CommentRequestDTO,
+  IssueStatus,
 } from "@types";
 import { _axios } from "../AxiosService";
 import UserService from "./UserService";
@@ -111,15 +112,19 @@ class IssueService {
   static async patchChangeState({
     issueId,
     userId,
+    status,
   }: {
     issueId: string;
     userId: string;
+    status?: IssueStatus;
   }) {
-    const { status } = await this.getByIdJSON(issueId);
-    const IssueStatus = status === "open" ? "close" : "open";
-    const commentStatus = status === "open" ? "closed" : "reopen";
+    const targetStatus = status ?? (await this.getByIdJSON(issueId)).status;
+    const IssueStatus = targetStatus === "open" ? "close" : "open";
+    const commentStatus = targetStatus === "open" ? "closed" : "reopen";
     const comemntContent =
-      status === "open" ? "이슈가 닫혔습니다." : "이슈가 다시 열렸습니다.";
+      targetStatus === "open"
+        ? "이슈가 닫혔습니다."
+        : "이슈가 다시 열렸습니다.";
 
     const comment: CommentRequestDTO = {
       status: commentStatus,

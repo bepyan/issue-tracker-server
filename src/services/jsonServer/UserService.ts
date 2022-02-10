@@ -14,6 +14,11 @@ export default class UserService {
     return data;
   }
 
+  static async searchById(id: string) {
+    const { data } = await _axios.get<UserJSON[]>(`${baseURL}?id=${id}`);
+    return data;
+  }
+
   static async getUserName(id: string) {
     const { name } = await UserService.getById(id);
     return name;
@@ -30,7 +35,7 @@ export default class UserService {
   }
 
   static async register(payload: UserDTO) {
-    const { data } = await _axios.post<UserDTO>(baseURL, payload);
+    const { data } = await _axios.post<UserDTO>(`${baseURL}`, payload);
     return data;
   }
 

@@ -56,7 +56,7 @@ router.post(
       res.status(400).json({ message: "유효하지 않은 요청입니다." });
       return;
     }
-    const isDuplicated = !!(await UserService.getById(user.id));
+    const isDuplicated = !!(await UserService.searchById(user.id)).length;
     if (isDuplicated) {
       res.status(400).json({ message: "중복된 아이디가 있습니다." });
       return;
