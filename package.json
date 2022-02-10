@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon --watch \"src/**/*.ts\"  --exec ts-node --files src/app.ts",
     "build": "tsc -p .",
-    "start": "node dist/app.js"
+    "start": "yarn install && yarn build && node dist/app.js"
   },
   "dependencies": {
     "axios": "^0.25.0",
