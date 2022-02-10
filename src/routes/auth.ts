@@ -33,7 +33,8 @@ router.get(
     res
       .status(301)
       .redirect(
-        "http://localhost:3000/auth/callback" + `?accessToken=${accessToken}`
+        "https://bepyan.github.io/fe-w4-issue-tracker/auth/callback" +
+          `?accessToken=${accessToken}`
       );
   }
 );
