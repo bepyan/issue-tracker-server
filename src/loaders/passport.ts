@@ -35,7 +35,8 @@ const useGithub = () => {
       {
         clientID: GITHUB_CLIENT_ID,
         clientSecret: GITHUB_CLIENT_SECRET,
-        callbackURL: "http://localhost:1234/api/auth/github/callback",
+        callbackURL:
+          "https://fe-w4-issue-tracker.herokuapp.com/api/auth/github/callback",
       },
       (
         _accessToken: any,
