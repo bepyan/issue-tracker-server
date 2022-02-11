@@ -19,7 +19,7 @@ router.get("/github", passport.authenticate("github", { session: false }));
 router.get(
   "/github/callback",
   passport.authenticate("github", {
-    failureRedirect: "https://bepyan.github.io/fe-w4-issue-tracker",
+    failureRedirect: `${process.env.FRONTEND_URL}`,
     session: false,
   }),
   async (req, res) => {
@@ -33,8 +33,7 @@ router.get(
     res
       .status(301)
       .redirect(
-        "https://bepyan.github.io/fe-w4-issue-tracker/auth/callback" +
-          `?accessToken=${accessToken}`
+        `${process.env.FRONTEND_URL}/auth/callback?accessToken=${accessToken}`
       );
   }
 );

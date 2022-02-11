@@ -6,7 +6,7 @@ export type AxiosResponse<T> = Promise<{
 }>;
 
 const instance = axios.create({
-  baseURL: "https://fe-w4-issue-tracker.herokuapp.com/json",
+  baseURL: `${process.env.FRONT_URL}/json`,
   timeout: 15000,
 });
 
