@@ -6,7 +6,7 @@ export type AxiosResponse<T> = Promise<{
 }>;
 
 const instance = axios.create({
-  baseURL: `${process.env.FRONT_URL}/json`,
+  baseURL: `${process.env.BACKEND_URL}/json`,
   timeout: 15000,
 });
 
